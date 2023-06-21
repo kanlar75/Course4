@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "kurs4-oop"
+version = "0.1.0"
+description = ""
+authors = ["kanlar75 <kanlar75@gmail.com>"]
+readme = "README.md"
+packages = [{include = "kurs4_oop"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
