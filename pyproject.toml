@@ -9,6 +9,7 @@ packages = [{include = "kurs4_oop"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 requests = "^2.31.0"
+fake-useragent = "^1.1.3"
 
 
 [build-system]
