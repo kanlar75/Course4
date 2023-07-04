@@ -307,7 +307,6 @@ class JSONSaver(FileHandling):
         return find_list
 
 
-
 # vacancies_sj = SuperJobAPI()
 # vacancies_hh = HeadHunterAPI()
 # list_sj = vacancies_sj.get_vacancies('python')
@@ -316,6 +315,10 @@ class JSONSaver(FileHandling):
 # Vacancy.instantiate_from_data(list_sj)
 # f = JSONSaver()
 # f.save_vacancies(f.json_exemplars(Vacancy.vac_list))
+# f = input("words").split()
+# d = ','.join(f)
+
+# print(type(d))
 # Vacancy.instantiate_from_data(f.delete_vacancy(45000))
 # f.save_vacancies(f.json_exemplars(Vacancy.vac_list))
 # for v in Vacancy.vac_list:
