@@ -3,7 +3,9 @@ import requests
 import fake_useragent
 from abc import ABC, abstractmethod
 
+# количество страниц для поиска
 pages = 5
+# число вакансий на странице
 vacancies_on_page = 100
 
 
@@ -88,7 +90,7 @@ class HeadHunterAPI(FindVacancies):
 
 
 class SuperJobAPI(FindVacancies):
-    """ Класс для работы с SuperJob по API """
+    """ Класс для работы с вакансиями SuperJob """
 
     API_TOKEN_SJ = 'v3.r.13773054.322adb5f53925517e4e5d74ec1b4ac2fc2fb5d21' \
                    '.643a11cd83b584cd8028edf34a0e6ef951dd8e1e'
@@ -164,8 +166,10 @@ class Vacancy:
 
     @classmethod
     def instantiate_from_data(cls, instantiate_list):
-        """ Инициализирует экземпляры класса Vacancy из отформатированного
-        списка """
+        """
+        Инициализирует экземпляры класса Vacancy из отформатированного
+        списка
+        """
 
         cls.data_list = instantiate_list
         for data in cls.data_list:
@@ -189,10 +193,11 @@ class Vacancy:
                     )
 
     # def __repr__(self):
-    #     return (f"Vacancy(name={self.title}, salary_from={self.salary_from}, "
-    #             f"salary_to={self.salary_to}, salary_currency={self.currency}, "
-    #             f"town={self.town}, experience={self.experience}, "
-    #             f"url={self.url}")
+    # """ Для разработчика """
+    # return (f"Vacancy(name={
+    # self.title}, salary_from={self.salary_from}, " f"salary_to={
+    # self.salary_to}, salary_currency={self.currency}, " f"town={
+    # self.town}, experience={self.experience}, " f"url={self.url}")
 
     def __str__(self):
         """ Строковое представление для пользователя """
@@ -237,7 +242,7 @@ class Vacancy:
 
 
 class JSONSaver(FileHandling):
-
+    """ Класс для работы с файлом """
     def __init__(self, file_name='data.json'):
         self.file_name = file_name
 
@@ -264,43 +269,53 @@ class JSONSaver(FileHandling):
 
         Vacancy.vac_list = []
         find_list = []
-        with open(self.file_name, 'r', encoding='utf8') as file:
-            data_lst = json.load(file)
-            for data in data_lst:
-                if find_str.lower() in data['town'].lower():
-                    find_list.append(data)
-                else:
-                    continue
+        try:
+            with open(self.file_name, 'r', encoding='utf8') as file:
+                data_lst = json.load(file)
+                for data in data_lst:
+                    if find_str.lower() in data['town'].lower():
+                        find_list.append(data)
+                    else:
+                        continue
+        except FileNotFoundError:
+            print("File not found")
         Vacancy.instantiate_from_data(find_list)
 
     def get_vacancies_salary_max(self):
 
         Vacancy.vac_list = []
         find_list = []
-        with open(self.file_name, 'r', encoding='utf8') as file:
-            data_lst = json.load(file)
-            for data in data_lst:
-                if data['currency'] == 'RUR':
-                    find_list.append(data)
-                else:
-                    continue
-            find_list.sort(key=lambda lst_: lst_['salary_from'], reverse=True)
+        try:
+            with open(self.file_name, 'r', encoding='utf8') as file:
+                data_lst = json.load(file)
+                for data in data_lst:
+                    if data['currency'] == 'RUR':
+                        find_list.append(data)
+                    else:
+                        continue
+                find_list.sort(key=lambda lst_: lst_['salary_from'], reverse=True)
+        except FileNotFoundError:
+            print("File not found")
         Vacancy.instantiate_from_data(find_list)
 
     def get_vacancies_by_word(self, word_list):
+        Vacancy.vac_list = []
         find_list = []
-        with open(self.file_name, 'r', encoding='utf8') as file:
-            data_lst = json.load(file)
-            for data in data_lst:
-                for word in word_list:
-                    if word.lower() in data['description'].lower() or word in \
-                            data[
-                                'education'].lower() \
-                            or word in data['experience'].lower():
-                        find_list.append(data)
-                else:
-                    continue
-            find_list.sort(key=lambda lst_: lst_['salary_from'], reverse=True)
+        try:
+            with open(self.file_name, 'r', encoding='utf8') as file:
+                data_lst = json.load(file)
+                for data in data_lst:
+                    for word in word_list:
+                        if word.lower() in data['description'].lower() or word in \
+                                data[
+                                    'education'].lower() \
+                                or word in data['experience'].lower():
+                            find_list.append(data)
+                    else:
+                        continue
+                find_list.sort(key=lambda lst_: lst_['salary_from'], reverse=True)
+        except FileNotFoundError:
+            print("File not found")
         return find_list
 
     def get_vacancies_by_salary(self, salary):
@@ -311,15 +326,18 @@ class JSONSaver(FileHandling):
 
         Vacancy.vac_list = []
         find_list = []
-        with open(self.file_name, "r", encoding="utf-8") as file:
-            data_lst = json.load(file)
-            for data in data_lst:
-                if data["salary_from"] <= int(salary) or data['currency'] \
-                        != 'RUR':
-                    continue
-                else:
-                    find_list.append(data)
-            find_list.sort(key=lambda lst_: lst_['salary_from'], reverse=True)
+        try:
+            with open(self.file_name, "r", encoding="utf-8") as file:
+                data_lst = json.load(file)
+                for data in data_lst:
+                    if data["salary_from"] <= int(salary) or data['currency'] \
+                            != 'RUR':
+                        continue
+                    else:
+                        find_list.append(data)
+                find_list.sort(key=lambda lst_: lst_['salary_from'], reverse=True)
+        except FileNotFoundError:
+            print("File not found")
         Vacancy.instantiate_from_data(find_list)
 
     def delete_vacancy(self, salary):
@@ -327,12 +345,15 @@ class JSONSaver(FileHandling):
 
         Vacancy.vac_list = []
         find_list = []
-        with open(self.file_name, 'r', encoding='utf8') as file:
-            data_lst = json.load(file)
-            for data in data_lst:
-                if data['salary_from'] <= int(salary):
-                    continue
-                else:
-                    find_list.append(data)
-            find_list.sort(key=lambda lst_: lst_['salary_from'], reverse=True)
+        try:
+            with open(self.file_name, 'r', encoding='utf8') as file:
+                data_lst = json.load(file)
+                for data in data_lst:
+                    if data['salary_from'] <= int(salary):
+                        continue
+                    else:
+                        find_list.append(data)
+                find_list.sort(key=lambda lst_: lst_['salary_from'], reverse=True)
+        except FileNotFoundError:
+            print("File not found")
         Vacancy.instantiate_from_data(find_list)
