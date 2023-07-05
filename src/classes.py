@@ -188,18 +188,17 @@ class Vacancy:
                     experience=experience
                     )
 
-    def __repr__(self):
-        return (f"Vacancy(name={self.title}, salary_from={self.salary_from}, "
-                f"salary_to={self.salary_to}, salary_currency={self.currency}, "
-                f"town={self.town}, experience={self.experience}, "
-                f"url={self.url}")
+    # def __repr__(self):
+    #     return (f"Vacancy(name={self.title}, salary_from={self.salary_from}, "
+    #             f"salary_to={self.salary_to}, salary_currency={self.currency}, "
+    #             f"town={self.town}, experience={self.experience}, "
+    #             f"url={self.url}")
 
     def __str__(self):
         """ Строковое представление для пользователя """
 
         return f'Вакансия: {self.title}\nСсылка на вакансию: {self.url}\n' \
                f'Зарплата от: ' \
-               f'' \
                f'{self.salary_from if self.salary_from != 0 else "не указано"}' \
                f' {self.currency if self.salary_from != 0 else ""}\n' \
                f'Зарплата до: ' \

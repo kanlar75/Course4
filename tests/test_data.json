@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Программист Python Junior (BigData)",
+    "url": "https://hh.ru/vacancy/82524858",
+    "salary_from": 45000,
+    "salary_to": 100000,
+    "currency": "RUR",
+    "description": "Обеспечивать работоспособность и доступность бизнес-систем компании. Управлять конфигурациями и микросервисами. Находить не тривиальные решения. Быть \"белыми хакерами\" всегда решать...",
+    "town": "Екатеринбург",
+    "education": "Высшее образование (можно неоконченное/неполное) технического ВУЗа (с курсов по <highlighttext>Python</highlighttext> не принимаем). Логичный и структурированный подход к решению задач...",
+    "experience": "Нет опыта"
+  },
+  {
+    "title": "Junior Программист/Разработчик Python",
+    "url": "https://hh.ru/vacancy/82392679",
+    "salary_from": 60000,
+    "salary_to": 0,
+    "currency": "RUR",
+    "description": "Разработка, тестирование, отладка и поддержка кросс-платформенных (x86/ARM) приложений на <highlighttext>Python</highlighttext>.",
+    "town": "Новосибирск",
+    "education": "Знание английского языка достаточное для чтения технической документации. Опыт разработки приложений на <highlighttext>Python</highlighttext>/Qt/C++/C#. Желателен опыт работы с.",
+    "experience": "От 1 года до 3 лет"
+  },
+  {
+    "title": "Разработчик Python",
+    "url": "https://hh.ru/vacancy/82822848",
+    "salary_from": 450000,
+    "salary_to": 590000,
+    "currency": "KZT",
+    "description": "Внедрение автоматизации и цифровизации. Разработка ERP системы на платформе Odoo. Анализ потребностей, разработка и внедрение новых процессов.",
+    "town": "Алматы",
+    "education": "Опыт программирования на <highlighttext>Python</highlighttext>. Знания СУБД PostgreSQL. Опыт работы с django или другим <highlighttext>python</highlighttext> web framework. Знание основ HTML, CSS. ",
+    "experience": "От 1 года до 3 лет"
+  },
+  {
+    "title": "Junior Python - Developer",
+    "url": "https://hh.ru/vacancy/82585620",
+    "salary_from": 60000,
+    "salary_to": 70000,
+    "currency": "RUR",
+    "description": "Поддержка текущего кода генератора. Создание новых креативов по инструкции (Т/З).",
+    "town": "Москва",
+    "education": "Понимание того, что такое Ffmpeg. Умение писать Bash-команды. Представление того, что такое s3 и как туда загружать файл.",
+    "experience": "От 1 года до 3 лет"
+  },
+  {
+    "title": "Начинающий программист (стажер)",
+    "url": "https://hh.ru/vacancy/82868479",
+    "salary_from": 30000,
+    "salary_to": 0,
+    "currency": "RUR",
+    "description": "Участие в работе с обработкой потоковых данных. Разработка end point. Парсинг данных. Сбор данных по API.",
+    "town": "Новосибирск",
+    "education": "<highlighttext>Python</highlighttext>. Postgres, ClickHouse. Возможность работать с распределений командой. Знания ООП. Высшее / неоконченное высшее (последний курс) техническое образование. Желание развиваться в...",
+    "experience": "Нет опыта"
+  }
+  ]

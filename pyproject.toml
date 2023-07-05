@@ -10,6 +10,9 @@ packages = [{include = "kurs4_oop"}]
 python = "^3.11"
 requests = "^2.31.0"
 fake-useragent = "^1.1.3"
+pytest = "^7.4.0"
+coverage = "^7.2.7"
+pytest-cov = "^4.1.0"
 
 
 [build-system]
