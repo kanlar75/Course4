@@ -253,7 +253,6 @@ class JSONSaver(FileHandling):
             list_dicts.append(obj.__dict__)
         return list_dicts
 
-    # @staticmethod
     def save_vacancies(self, list_dict):
         """ Метод сохранения списка словарей в JSON файл """
 
@@ -268,7 +267,7 @@ class JSONSaver(FileHandling):
         with open(self.file_name, 'r', encoding='utf8') as file:
             data_lst = json.load(file)
             for data in data_lst:
-                if find_str in data['town'].lower():
+                if find_str.lower() in data['town'].lower():
                     find_list.append(data)
                 else:
                     continue
@@ -314,7 +313,6 @@ class JSONSaver(FileHandling):
         find_list = []
         with open(self.file_name, "r", encoding="utf-8") as file:
             data_lst = json.load(file)
-            find_list = []
             for data in data_lst:
                 if data["salary_from"] <= int(salary) or data['currency'] \
                         != 'RUR':
