@@ -10,9 +10,7 @@ def print_info():
 
 def user_work_with_file():
     """ Функция взаимодействия с пользователем (работа с файлом) """
-
     json_saver = JSONSaver()
-    json_saver.save_vacancies(json_saver.json_exemplars(Vacancy.vac_list))
     while True:
         user_choice = input(
             'Выберите что делать?:\n0. Вывести все вакансии\n1. Вывести топ '
@@ -30,7 +28,7 @@ def user_work_with_file():
         elif user_choice == '1':
             input_top_number = int(input('Какое количество самых '
                                          'высокооплачиваемых'
-                                         'вакансий показать?\n').strip())
+                                         ' вакансий показать?\n').strip())
             json_saver.get_vacancies_salary_max()
             for i in range(input_top_number):
                 print(Vacancy.vac_list[i])
@@ -53,6 +51,7 @@ def user_work_with_file():
             json_saver.get_vacancies_by_salary(salary)
             print_info()
         elif user_choice == '5':
+            Vacancy.vac_list = []
             filtered = list(
                 map(str, input("Введите ключевые слова для поиска в "
                                "вакансиях (через пробел)\n").split()))

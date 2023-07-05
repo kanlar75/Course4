@@ -1,6 +1,6 @@
 import os
 
-from src.classes import HeadHunterAPI, SuperJobAPI, Vacancy
+from src.classes import HeadHunterAPI, SuperJobAPI, Vacancy, JSONSaver
 from src.utils import user_work_with_file
 
 
@@ -37,9 +37,12 @@ def main():
         else:
             print('\033[1;31mНужно выбрать цифру из предложенных '
                   'вариантов!!!\033[0m')
-
+        json_saver = JSONSaver()
+        json_saver.save_vacancies(json_saver.json_exemplars(Vacancy.vac_list))
+        user_work_with_file()
     # Работа с файлом
-    user_work_with_file()
+    else:
+        user_work_with_file()
 
 
 if __name__ == '__main__':

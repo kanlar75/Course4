@@ -299,7 +299,7 @@ class JSONSaver(FileHandling):
         Vacancy.instantiate_from_data(find_list)
 
     def get_vacancies_by_word(self, word_list):
-        Vacancy.vac_list = []
+
         find_list = []
         try:
             with open(self.file_name, 'r', encoding='utf8') as file:

@@ -40,12 +40,17 @@ def test_data():
                   'town': 'Москва',
                   'url': 'https://hh.ru/vacancy/81049446'},
                  {'currency': 0,
-                  'description': 'Создание технических требований для команды разработки и '
-                                 'дизайна. Сопровождение задач по реализации фичей. Проведение '
+                  'description': 'Создание технических требований для '
+                                 'команды разработки и'
+                                 'дизайна. Сопровождение задач по реализации '
+                                 'фичей. Проведение'
                                  'исследований в рамках сервиса.',
-                  'education': 'Понимание современных методологий управления. Знание основ UX. '
-                               'Будет плюсом знание <highlighttext>Python</highlighttext> на '
-                               'базовом или среднем уровне. Знание игрового рынка.',
+                  'education': 'Понимание современных методологий '
+                               'управления. Знание основ UX.'
+                               'Будет плюсом знание '
+                               '<highlighttext>Python</highlighttext> на'
+                               'базовом или среднем уровне. Знание игрового '
+                               'рынка.',
                   'experience': 'От 1 года до 3 лет',
                   'salary_from': 0,
                   'salary_to': 0,
@@ -53,12 +58,17 @@ def test_data():
                   'town': 'Москва',
                   'url': 'https://hh.ru/vacancy/81667513'},
                  {'currency': 0,
-                  'description': 'Разрабатывать и поддерживать программные продукты. Искать '
-                                 'оптимальные решения по разработке. Писать тесты. Писать '
+                  'description': 'Разрабатывать и поддерживать программные '
+                                 'продукты. Искать'
+                                 'оптимальные решения по разработке. Писать '
+                                 'тесты. Писать'
                                  'техническую документацию.',
-                  'education': '...тестов, а также понимание для чего они нужны. Знание или '
-                               'готовность к обучению языков программирования на базовом '
-                               'уровне: <highlighttext>Python</highlighttext>, Golang.',
+                  'education': '...тестов, а также понимание для чего они '
+                               'нужны. Знание или'
+                               'готовность к обучению языков '
+                               'программирования на базовом'
+                               'уровне: <highlighttext>Python</highlighttext'
+                               '>, Golang.',
                   'experience': 'От 1 года до 3 лет',
                   'salary_from': 0,
                   'salary_to': 0,
@@ -66,12 +76,18 @@ def test_data():
                   'town': 'Казань',
                   'url': 'https://hh.ru/vacancy/82898757'},
                  {'currency': 0,
-                  'description': 'Проведение прикладных исследований в направлениях '
-                                 '“Industrial AI”, “AI for Education”, “AI & ESG”. Участие в '
-                                 'совместных проектах с внутренними клиентами и...',
-                  'education': 'Хорошее знание <highlighttext>Python</highlighttext> (в том '
-                               'числе опыт работы с <highlighttext>Python</highlighttext>, ML '
-                               'или DL frameworks (Pandas, NumPy, SciPy, PyTorch, Tensorflow '
+                  'description': 'Проведение прикладных исследований в '
+                                 'направлениях'
+                                 '“Industrial AI”, “AI for Education”, “AI & '
+                                 'ESG”. Участие в'
+                                 'совместных проектах с внутренними '
+                                 'клиентами и...',
+                  'education': 'Хорошее знание '
+                               '<highlighttext>Python</highlighttext> (в том'
+                               'числе опыт работы с '
+                               '<highlighttext>Python</highlighttext>, ML'
+                               'или DL frameworks (Pandas, NumPy, SciPy, '
+                               'PyTorch, Tensorflow'
                                'и...',
                   'experience': 'От 1 года до 3 лет',
                   'salary_from': 0,
@@ -80,13 +96,19 @@ def test_data():
                   'town': 'Владивосток',
                   'url': 'https://hh.ru/vacancy/83001332'},
                  {'currency': 'RUR',
-                  'description': 'Изучение программных продуктов 1С. Моделирование '
-                                 'бизнес-процессов предприятия. Составлять запросы, '
-                                 'разрабатывать отчеты и печатные формы. Написание технической '
+                  'description': 'Изучение программных продуктов 1С. '
+                                 'Моделирование'
+                                 'бизнес-процессов предприятия. Составлять '
+                                 'запросы,'
+                                 'разрабатывать отчеты и печатные формы. '
+                                 'Написание технической'
                                  'документации.',
-                  'education': 'Знание основ алгоритмизации и программирования. Владение на '
-                               'базовом уровне одним из современных языков программирования '
-                               '(<highlighttext>Python</highlighttext>, Ruby, Java, C++, '
+                  'education': 'Знание основ алгоритмизации и '
+                               'программирования. Владение на'
+                               'базовом уровне одним из современных языков '
+                               'программирования'
+                               '(<highlighttext>Python</highlighttext>, '
+                               'Ruby, Java, C++,'
                                'etc). ',
                   'experience': 'Нет опыта',
                   'salary_from': 15000,
@@ -95,18 +117,26 @@ def test_data():
                   'town': 'Санкт-Петербург',
                   'url': 'https://hh.ru/vacancy/80483625'},
                  {'currency': 'RUR',
-                  'description': 'Создание мобильных приложений. Шахматы. Программирование '
-                                 'роботов. Программирование на Java. Базовая компьютерная '
-                                 'подготовка, Азы программирования, Компьютерная графика и '
-                                 'другие дисциплины <highlighttext>младших</highlighttext>...',
+                  'description': 'Создание мобильных приложений. Шахматы. '
+                                 'Программирование'
+                                 'роботов. Программирование на Java. Базовая '
+                                 'компьютерная'
+                                 'подготовка, Азы программирования, '
+                                 'Компьютерная графика и'
+                                 'другие дисциплины '
+                                 '<highlighttext>младших</highlighttext>...',
                   'education': 'Основы 3D моделирования. Программирование на '
-                               '<highlighttext>Python</highlighttext> или основы '
-                               'программирования на <highlighttext>Python</highlighttext>. '
-                               'Опыт работы не требуется, возможно трудоустройство в том...',
+                               '<highlighttext>Python</highlighttext> или '
+                               'основы'
+                               'программирования на '
+                               '<highlighttext>Python</highlighttext>.'
+                               'Опыт работы не требуется, возможно '
+                               'трудоустройство в том...',
                   'experience': 'Нет опыта',
                   'salary_from': 40000,
                   'salary_to': 50000,
-                  'title': 'Педагог\xa0дополнительного\xa0образования\xa0(цифровые технологии, '
+                  'title': 'Педагог\xa0дополнительного\xa0образования\xa0('
+                           'цифровые технологии,'
                            'информатика)',
                   'town': 'Санкт-Петербург',
                   'url': 'https://hh.ru/vacancy/80098005'}]
@@ -142,7 +172,7 @@ def obj_vacancy2():
 @pytest.fixture
 def obj_vacancy3():
     obj_vac3 = Vacancy("Программист Python Junior (BigData)",
-                       "https://hh.ru/vacancy/82524858", 450000, 100000, "RUR",
+                       "https://hh.ru/vacancy/82524858", 45000, 100000, "RUR",
                        "Обеспечивать работоспособность и доступность "
                        "бизнес-систем компании.",
                        "Екатеринбург",
@@ -164,6 +194,7 @@ def obj_vacancy4():
     return obj_vac4
 
 
+@pytest.fixture()
 def obj_vacancy5():
     obj_vac5 = Vacancy("Junior Python - Developer",
                        "https://hh.ru/vacancy/82585620", 61000, 70000, "RUR",
@@ -175,6 +206,7 @@ def obj_vacancy5():
     return obj_vac5
 
 
+@pytest.fixture()
 def obj_vacancy6():
     obj_vac6 = Vacancy("Начинающий программист (стажер)",
                        "https://hh.ru/vacancy/82868479", 30000, 0, "RUR",
@@ -190,7 +222,6 @@ def obj_vacancy6():
 def list_obj(obj_vacancy1, obj_vacancy2, obj_vacancy3, obj_vacancy4):
     list_obj_vac = [obj_vacancy1, obj_vacancy2, obj_vacancy3]
     return list_obj_vac
-
 
 # # Временный файл json для тестов, возможно не пригодится
 # @pytest.fixture(scope='module')
