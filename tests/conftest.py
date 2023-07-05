@@ -113,6 +113,7 @@ def test_data():
     return test_data
 
 
+# obj_vac1 - obj_vac6 тестовые объекты класса Vacancy
 @pytest.fixture
 def obj_vacancy1():
     obj_vac1 = Vacancy("Старший инженер-программист",
@@ -120,39 +121,173 @@ def obj_vacancy1():
                        "разработка и улучшение приложения pSeven Enterprise",
                        "ОАЭ",
                        "более 10 лет коммерческого опыта работы в командной "
-                       "среде. - глубокие знания Python 3. - умение "
-                       "создавать чистый, структурированный код с понятными...",
+                       "среде.",
                        "Более 6 лет")
     return obj_vac1
 
 
 @pytest.fixture
 def obj_vacancy2():
-    obj_vac2 = Vacancy("Python разработчик",
-                       "https://hh.ru/vacancy/82963358", 55000, 100000, "RUR",
-                       "разработка и улучшение приложения",
-                       "Москва",
-                       "более 5 лет коммерческого опыта работы в командной "
-                       "среде. - глубокие знания Python 3. - умение "
-                       "создавать чистый, структурированный код с понятными...",
-                       "Более 6 лет")
+    obj_vac2 = Vacancy("Junior Программист/Разработчик Python",
+                       "https://hh.ru/vacancy/82392679", 60000, 0, "RUR",
+                       "Разработка, тестирование, отладка и поддержка "
+                       "кросс-платформенных (x86/ARM) приложений",
+                       "Новосибирск",
+                       "Знание английского языка достаточное для чтения "
+                       "технической документации.",
+                       "От 1 года до 3 лет")
     return obj_vac2
 
 
 @pytest.fixture
 def obj_vacancy3():
-    obj_vac3 = Vacancy("Senior Python engineer",
-                       "https://hh.ru/vacancy/82963288", 350000, 500000, "KZT",
-                       "разработка и улучшение приложения pSeven Enterprise",
-                       "Астана",
-                       "более 10 лет коммерческого опыта работы в командной "
-                       "среде. - глубокие знания Python 3. - умение "
-                       "создавать чистый, структурированный код с понятными...",
-                       "Более 6 лет")
+    obj_vac3 = Vacancy("Программист Python Junior (BigData)",
+                       "https://hh.ru/vacancy/82524858", 450000, 100000, "RUR",
+                       "Обеспечивать работоспособность и доступность "
+                       "бизнес-систем компании.",
+                       "Екатеринбург",
+                       "Высшее образование (можно неоконченное/неполное) "
+                       "технического ВУЗа.",
+                       "Нет опыта")
     return obj_vac3
 
 
 @pytest.fixture
-def list_obj(obj_vacancy1, obj_vacancy2, obj_vacancy3):
+def obj_vacancy4():
+    obj_vac4 = Vacancy("Разработчик Python",
+                       "https://hh.ru/vacancy/82822848", 450000, 590000, "KZT",
+                       "Внедрение автоматизации и цифровизации.",
+                       "Алматы",
+                       "Высшее образование (можно неоконченное/неполное)",
+                       "Опыт программирования на Python. Знания СУБД "
+                       "PostgreSQL.")
+    return obj_vac4
+
+
+def obj_vacancy5():
+    obj_vac5 = Vacancy("Junior Python - Developer",
+                       "https://hh.ru/vacancy/82585620", 61000, 70000, "RUR",
+                       "Поддержка текущего кода генератора.",
+                       "Москва",
+                       "Понимание того, что такое Ffmpeg. Умение писать "
+                       "Bash-команды.",
+                       "От 1 года до 3 лет")
+    return obj_vac5
+
+
+def obj_vacancy6():
+    obj_vac6 = Vacancy("Начинающий программист (стажер)",
+                       "https://hh.ru/vacancy/82868479", 30000, 0, "RUR",
+                       "Участие в работе с обработкой потоковых данных.",
+                       "Новосибирск",
+                       "Python. Postgres, ClickHouse.",
+                       "Нет опыта")
+    return obj_vac6
+
+
+# Список экземпляров класса Vacancy
+@pytest.fixture
+def list_obj(obj_vacancy1, obj_vacancy2, obj_vacancy3, obj_vacancy4):
     list_obj_vac = [obj_vacancy1, obj_vacancy2, obj_vacancy3]
     return list_obj_vac
+
+
+# # Временный файл json для тестов, возможно не пригодится
+# @pytest.fixture(scope='module')
+# def temp_file_json(tmpdir_factory):
+#     """
+#     Записываем тестовые данные в файл 'test_data.json' во временной
+#     директории.
+#     """
+#     temp_data = [
+#         {
+#             "title": "Программист Python Junior (BigData)",
+#             "url": "https://hh.ru/vacancy/82524858",
+#             "salary_from": 45000,
+#             "salary_to": 100000,
+#             "currency": "RUR",
+#             "description": "Обеспечивать работоспособность и доступность "
+#                            "бизнес-систем компании. Управлять конфигурациями "
+#                            "и микросервисами. Находить не тривиальные "
+#                            "решения. Быть \"белыми хакерами\" всегда "
+#                            "решать...",
+#             "town": "Екатеринбург",
+#             "education": "Высшее образование (можно неоконченное/неполное) "
+#                          "технического ВУЗа (с курсов по "
+#                          "<highlighttext>Python</highlighttext> не "
+#                          "принимаем). Логичный и структурированный подход к "
+#                          "решению задач...",
+#             "experience": "Нет опыта"
+#         },
+#         {
+#             "title": "Junior Программист/Разработчик Python",
+#             "url": "https://hh.ru/vacancy/82392679",
+#             "salary_from": 60000,
+#             "salary_to": 0,
+#             "currency": "RUR",
+#             "description": "Разработка, тестирование, отладка и поддержка "
+#                            "кросс-платформенных (x86/ARM) приложений на "
+#                            "<highlighttext>Python</highlighttext>.",
+#             "town": "Новосибирск",
+#             "education": "Знание английского языка достаточное для чтения "
+#                          "технической документации. Опыт разработки "
+#                          "приложений на "
+#                          "<highlighttext>Python</highlighttext>/Qt/C++/C#. "
+#                          "Желателен опыт работы с.",
+#             "experience": "От 1 года до 3 лет"
+#         },
+#         {
+#             "title": "Разработчик Python",
+#             "url": "https://hh.ru/vacancy/82822848",
+#             "salary_from": 450000,
+#             "salary_to": 590000,
+#             "currency": "KZT",
+#             "description": "Внедрение автоматизации и цифровизации. "
+#                            "Разработка ERP системы на платформе Odoo. Анализ "
+#                            "потребностей, разработка и внедрение новых "
+#                            "процессов.",
+#             "town": "Алматы",
+#             "education": "Опыт программирования на "
+#                          "<highlighttext>Python</highlighttext>. Знания СУБД "
+#                          "PostgreSQL. Опыт работы с django или другим "
+#                          "<highlighttext>python</highlighttext> web "
+#                          "framework. Знание основ HTML, CSS. ",
+#             "experience": "От 1 года до 3 лет"
+#         },
+#         {
+#             "title": "Junior Python - Developer",
+#             "url": "https://hh.ru/vacancy/82585620",
+#             "salary_from": 61000,
+#             "salary_to": 70000,
+#             "currency": "RUR",
+#             "description": "Поддержка текущего кода генератора. Создание "
+#                            "новых креативов по инструкции (Т/З).",
+#             "town": "Москва",
+#             "education": "Понимание того, что такое Ffmpeg. Умение писать "
+#                          "Bash-команды. Представление того, что такое s3 и "
+#                          "как туда загружать файл.",
+#             "experience": "От 1 года до 3 лет"
+#         },
+#         {
+#             "title": "Начинающий программист (стажер)",
+#             "url": "https://hh.ru/vacancy/82868479",
+#             "salary_from": 30000,
+#             "salary_to": 0,
+#             "currency": "RUR",
+#             "description": "Участие в работе с обработкой потоковых данных. "
+#                            "Разработка end point. Парсинг данных. Сбор "
+#                            "данных по API.",
+#             "town": "Новосибирск",
+#             "education": "<highlighttext>Python</highlighttext>. Postgres, "
+#                          "ClickHouse. Возможность работать с распределений "
+#                          "командой. Знания ООП. Высшее / неоконченное высшее "
+#                          "(последний курс) техническое образование. Желание "
+#                          "развиваться в...",
+#             "experience": "Нет опыта"
+#         }
+#     ]
+#     file = tmpdir_factory.mktemp('data').join('test_data.json')
+#
+#     with file.open('w') as f:
+#         json.dump(temp_data, f)
+#     return file
